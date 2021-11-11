@@ -43,7 +43,7 @@ const Login = () => {
 
             const moverA = (administrador) => {
                 if (administrador === 1) {
-                  history.push('factura');
+                  history.push('/factura');
                 } else if (administrador === 0) {
                   history.push('/Dashboard');
                 }
