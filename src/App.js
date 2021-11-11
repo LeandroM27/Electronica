@@ -9,6 +9,7 @@ import Historial from './pages/Historial';
 import Login from './pages/Login';
 import Nav from './componets/auth/Nav';
 import Signup from './pages/Signup';
+import { ProtectedRouteAdmin } from "./helper/protected.route";
 
 import {useState, useEffect} from 'react';
 
@@ -48,14 +49,7 @@ function App() {
               </>
             )
           }/>
-          <Route path="/factura" render={
-            (porps) => (
-              <>
-                <Navbar />
-                <Factura/>
-              </>
-            )
-          }/>
+          <ProtectedRouteAdmin path="/factura" component={Factura}/>
           <Route path="/historial" render={
             (porps) => (
               <>
